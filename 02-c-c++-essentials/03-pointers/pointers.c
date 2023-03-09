@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     int x = 10;
@@ -19,5 +20,16 @@ int main() {
     for (int i = 0; i < 5; i++) {
         printf("*(pA + %d): %d\n", i, *(pA + i));
     }
+    // Heap memory
+    int *pHeap = (int *)malloc(5 * sizeof(int));
+    pHeap[0] = 2;
+    pHeap[1] = 4;
+    pHeap[2] = 6;
+    pHeap[3] = 8;
+    pHeap[4] = 10;
+    for (int i = 0; i < 5; i++) {
+        printf("*(pHeap + %d): %d\n", i, *(pHeap + i));
+    }
+    free(pHeap);
     return 0;
 }
