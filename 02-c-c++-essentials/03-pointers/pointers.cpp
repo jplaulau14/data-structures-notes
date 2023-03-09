@@ -20,5 +20,15 @@ int main() {
     for (int i = 0; i < 5; i++) {
         cout << "*(pA + " << i << "): " << *(pA + i) << endl;
     }
+    // Heap memory
+    int *pHeap = new int[5];
+    pHeap[0] = 2;
+    pHeap[1] = 4;
+    pHeap[2] = 6;
+    pHeap[3] = 8;
+    pHeap[4] = 10;
+    for (int i = 0; i < 5; i++) {
+        cout << "*(pHeap + " << i << "): " << *(pHeap + i) << endl;
+    }
     return 0;
 }
