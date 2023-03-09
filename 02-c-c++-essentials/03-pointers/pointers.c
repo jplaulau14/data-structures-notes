@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct Rectangle {
+    int width;
+    int height;
+};
+
 int main() {
     int x = 10;
     int *p = &x;
@@ -31,5 +36,16 @@ int main() {
         printf("*(pHeap + %d): %d\n", i, *(pHeap + i));
     }
     free(pHeap);
+    // Data types
+    int *pInt;
+    char *pChar;
+    float *pFloat;
+    double *pDouble;
+    struct Rectangle *pRect;
+    printf("Size of int: %lu bytes\n", sizeof(pInt));
+    printf("Size of char: %lu bytes\n", sizeof(pChar));
+    printf("Size of float: %lu bytes\n", sizeof(pFloat));
+    printf("Size of double: %lu bytes\n", sizeof(pDouble));
+    printf("Size of Rectangle: %lu bytes\n", sizeof(pRect));
     return 0;
 }
