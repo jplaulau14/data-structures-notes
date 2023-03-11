@@ -7,13 +7,6 @@ void valSwap(int a, int b) {
     b = temp;
 }
 
-// Pass by reference swapping
-void refSwap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
 // Pass by address swapping
 void addSwap(int *a, int *b) {
     int temp = *a;
@@ -26,8 +19,6 @@ int main() {
     int y = 20;
     printf("x: %d, y: %d\n", x, y);
     valSwap(x, y);
-    printf("x: %d, y: %d\n", x, y);
-    refSwap(&x, &y);
     printf("x: %d, y: %d\n", x, y);
     x = 10;
     y = 20;
