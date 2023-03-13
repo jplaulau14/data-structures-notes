@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int fun(int n) {
+void fun(int n) {
     static int x = 0;
     if (n > 0) {
         x++;
-        return fun(n-1) + x;
+        cout << x << " ";
+        fun(n - 1);
     }
-    return 0;
 }
 
 int main() {
-    int x = 5;
-    cout << fun(x) << endl;
+    int x = 3;
+    fun(x);
+    cout << endl;
     return 0;
 }
