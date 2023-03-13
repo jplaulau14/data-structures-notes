@@ -1,15 +1,25 @@
 #include <iostream>
 using namespace std;
 
-void fun(int n) {
+void funRecursion(int n) {
     if (n > 0) {
         cout << n << " ";
-        fun(n-1);
+        funRecursion(n-1);
+    }
+}
+
+void funLoop(int n) {
+    while (n > 0) {
+        cout << n << " ";
+        n--;
     }
 }
 
 int main() {
     int x = 3;
-    fun(x);
+    funRecursion(x);
+    cout << endl;
+    funLoop(x);
+    cout << endl;
     return 0;
 }
