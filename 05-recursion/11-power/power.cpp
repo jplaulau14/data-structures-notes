@@ -16,9 +16,25 @@ int powerLoop(int b, int e) {
     return res;
 }
 
+int powerRecursionFaster(int b, int e) {
+    if (e == 0) {
+        return 1;
+    }
+
+    if (e % 2 == 0) {
+        return powerRecursionFaster(b*b, e/2);
+    }
+
+    else {
+        return b * powerRecursionFaster(b*b, (e-1)/2);
+    }
+
+}
+
 int main() {
     int n = 5;
     int b = 2;
     cout << powerRecursion(b, n) << endl;
     cout << powerLoop(b, n) << endl;
+    cout << powerRecursionFaster(b, n) << endl;
 }
